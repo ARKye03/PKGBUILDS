@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Define the README file path
+README_FILE="README.md"
+
+# Start the README content
+echo "# PKGBUILDS" > $README_FILE
+echo "" >> $README_FILE
+
+# Function to extract pkgname and pkgdesc from a PKGBUILD file
+extract_pkg_info() {
+    local file=$1
+    local pkgname=$(grep "^pkgname=" "$file" | cut -d'=' -f2)
+    local pkgdesc=$(grep "^pkgdesc=" "$file" | cut -d"'" -f2)
+    echo "- **$pkgname**: $pkgdesc" >> $README_FILE
+}
+
+# Process each PKGBUILD file
+for file in */PKGBUILD; do
+    extract_pkg_info "$file"
+done
