@@ -1,0 +1,23 @@
+pkgbase = morghulis-git
+	pkgdesc = GTK4 Desktop Shell (Development Version)
+	pkgver = r183.b4891d8
+	pkgrel = 1
+	url = https://github.com/ARKye03/morghulis
+	arch = x86_64
+	license = WTFPL
+	makedepends = git
+	makedepends = gobject-introspection
+	makedepends = vala
+	makedepends = meson
+	makedepends = dart-sass
+	makedepends = blueprint-compiler
+	depends = gtk4
+	depends = gtk4-layer-shell
+	depends = glib2
+	depends = libnm
+	depends = libastal-meta
+	depends = libadwaita
+	source = morghulis-git::git+https://github.com/ARKye03/morghulis
+	sha256sums = SKIP
+
+pkgname = morghulis-git

@@ -1,0 +1,17 @@
+pkgbase = morghulis
+	pkgdesc = GTK4 Desktop Shell
+	pkgver = v0.5.0
+	pkgrel = 1
+	url = https://github.com/ARKye03/morghulis
+	arch = x86_64
+	license = WTFPL
+	depends = gtk4
+	depends = gtk4-layer-shell
+	depends = glib2
+	depends = libnm
+	depends = libastal-meta
+	depends = libadwaita
+	source = morghulis-v0.5.0::https://github.com/ARKye03/morghulis/releases/download/v0.5.0/morghulis-v0.5.0
+	sha256sums = 51018472ef947bbe2fe5b76c752836c96b0d6e4a288fb2b53fdc0b3e0b5da2e2
+
+pkgname = morghulis
