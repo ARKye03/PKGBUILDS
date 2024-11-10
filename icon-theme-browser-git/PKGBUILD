@@ -1,11 +1,11 @@
 # Maintainer: ARKye03 <rafa03-dev@proton.me>
 
 pkgname=icon-theme-browser-git
-pkgver=r4.7e08384
+pkgver=r4.7e08384 # Can't be empty, will be set dynamically
 pkgrel=1
 pkgdesc='Browse system installed icon themes'
 arch=(x86_64)
-license=(MIT)
+license=('MIT')
 url="https://github.com/Aylur/icon-theme-browser"
 depends=(
 	gtk4
