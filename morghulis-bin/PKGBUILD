@@ -16,7 +16,7 @@ depends=(
 	libadwaita
 )
 source=("${pkgname}-${pkgver}::${url}/releases/download/${pkgver}/morghulis-${pkgver}")
-sha256sums=('51018472ef947bbe2fe5b76c752836c96b0d6e4a288fb2b53fdc0b3e0b5da2e2')
+sha256sums=('2f198179fd5a13fb09d7a73b2ccf28e6abc1ce2ab0022d429b76102389e21051')
 
 package() {
 	install -Dm755 "${srcdir}/morghulis-${pkgver}" "${pkgdir}/usr/bin/morghulis"
