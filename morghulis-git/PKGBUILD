@@ -23,7 +23,7 @@ makedepends=(
 	dart-sass
 	blueprint-compiler
 )
-source=("${pkgname}::git+https://github.com/ARKye03/morghulis")
+source=("${pkgname}::git+${url}")
 sha256sums=('SKIP')
 
 pkgver() {
