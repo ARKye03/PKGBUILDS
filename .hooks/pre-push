@@ -12,7 +12,8 @@ extract_pkg_info() {
     local file=$1
     local pkgname=$(grep "^pkgname=" "$file" | cut -d'=' -f2)
     local pkgdesc=$(grep "^pkgdesc=" "$file" | cut -d"\"" -f2)
-    echo "- **$pkgname**: $pkgdesc" >> $README_FILE
+    local pkgurl=$(grep "^url=" "$file" | cut -d"\"" -f2)
+    echo "- [**$pkgname**]($pkgurl): $pkgdesc" >> $README_FILE
 }
 
 # Process each PKGBUILD file
