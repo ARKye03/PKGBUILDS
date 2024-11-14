@@ -3,7 +3,7 @@
 pkgname=morghulis-git
 pkgver=r183.b4891d8
 pkgrel=1
-pkgdesc='GTK4 Desktop Shell (Development Version)'
+pkgdesc="GTK4 Desktop Shell (Development Version)"
 arch=(x86_64)
 license=(WTFPL)
 url="https://github.com/ARKye03/morghulis"
