@@ -1,6 +1,6 @@
 pkgbase = morghulis
 	pkgdesc = GTK4 Desktop Shell
-	pkgver = v0.7.0
+	pkgver = v0.7.1
 	pkgrel = 1
 	url = https://github.com/ARKye03/morghulis
 	arch = x86_64
@@ -11,7 +11,7 @@ pkgbase = morghulis
 	depends = libnm
 	depends = libastal-meta
 	depends = libadwaita
-	source = morghulis-v0.7.0::https://github.com/ARKye03/morghulis/releases/download/v0.7.0/morghulis-v0.7.0.tar.xz
-	sha256sums = ff36a0baf0d5314a93b693d005a122a2d4e12127714516e8e76c2ee212037f2a
+	source = morghulis-v0.7.1::https://github.com/ARKye03/morghulis/releases/download/v0.7.1/morghulis-v0.7.1.tar.xz
+	sha256sums = 19d4e983e0dbf861c7b2caf5ed4f8bddc376800c53db974aa1ba4f9aec5431ea
 
 pkgname = morghulis
