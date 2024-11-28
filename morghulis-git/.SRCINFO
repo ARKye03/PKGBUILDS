@@ -1,6 +1,6 @@
 pkgbase = morghulis-git
 	pkgdesc = GTK4 Desktop Shell (Development Version)
-	pkgver = r183.b4891d8
+	pkgver = r273.df9b59a
 	pkgrel = 1
 	url = https://github.com/ARKye03/morghulis
 	arch = x86_64
@@ -17,6 +17,8 @@ pkgbase = morghulis-git
 	depends = libnm
 	depends = libastal-meta
 	depends = libadwaita
+	provides = morghulis
+	conflicts = morghulis
 	source = morghulis-git::git+https://github.com/ARKye03/morghulis
 	sha256sums = SKIP
 

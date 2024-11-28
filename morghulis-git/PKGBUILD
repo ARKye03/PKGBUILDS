@@ -1,7 +1,7 @@
 # Maintainer: ARKye03 <rafa03-dev@proton.me>
 
 pkgname=morghulis-git
-pkgver=r183.b4891d8
+pkgver=r273.df9b59a
 pkgrel=1
 pkgdesc="GTK4 Desktop Shell (Development Version)"
 arch=(x86_64)
@@ -25,6 +25,8 @@ makedepends=(
 )
 source=("${pkgname}::git+${url}")
 sha256sums=('SKIP')
+provides=('morghulis')
+conflicts=('morghulis')
 
 pkgver() {
 	cd "$pkgname" || exit
