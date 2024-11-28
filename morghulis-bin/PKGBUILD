@@ -18,8 +18,8 @@ depends=(
 source=("${pkgname}-${pkgver}::${url}/releases/download/${pkgver}/morghulis-${pkgver}.tar.xz")
 sha256sums=('19d4e983e0dbf861c7b2caf5ed4f8bddc376800c53db974aa1ba4f9aec5431ea')
 
-prepare(){
-	cd "${srcdir}"
+prepare() {
+	cd "${srcdir}" || exit
 }
 
 package() {
