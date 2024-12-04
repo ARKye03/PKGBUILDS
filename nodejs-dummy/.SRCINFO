@@ -1,0 +1,8 @@
+pkgbase = nodejs-dummy
+	pkgdesc = Dummy package for nodejs
+	pkgver = 1.0.0
+	pkgrel = 1
+	arch = any
+	provides = nodejs=99.0.0
+
+pkgname = nodejs-dummy
