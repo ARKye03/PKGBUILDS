@@ -6,3 +6,4 @@
 - [**morghulis**](https://github.com/ARKye03/morghulis): GTK4 Desktop Shell
 - [**morghulis-git**](https://github.com/ARKye03/morghulis): GTK4 Desktop Shell (Development Version)
 - [**nodejs-dummy**](): Dummy package for nodejs
+- [**npm-dummy**](): Dummy package for npm
