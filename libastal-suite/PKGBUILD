@@ -1,4 +1,4 @@
-pkgname=("libastal-suite-git")
+pkgname=libastal-suite-git
 pkgver=r623.4c19d8d
 pkgrel=1
 pkgdesc="One library to rule them all, don't use it unless you know what you are doing"
