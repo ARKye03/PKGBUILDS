@@ -1,0 +1,8 @@
+pkgbase = npm-dummy
+	pkgdesc = Dummy package for npm
+	pkgver = 1.0.0
+	pkgrel = 1
+	arch = any
+	provides = npm=99.0.0
+
+pkgname = npm-dummy
