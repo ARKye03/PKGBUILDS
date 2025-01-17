@@ -1,7 +1,7 @@
 # Maintainer: ARKye03 <rafa03-dev@proton.me>
 
 pkgname=morghulis-git
-pkgver=r273.df9b59a
+pkgver=v0.8.0.r45.g7b36fae
 pkgrel=1
 pkgdesc="GTK4 Desktop Shell (Development Version)"
 arch=(x86_64)
@@ -12,8 +12,23 @@ depends=(
 	gtk4-layer-shell
 	glib2
 	libnm
-	libastal-meta
 	libadwaita
+	libastal-io-git
+	libastal-4-git
+	libastal-mpris-git
+	libastal-notifd-git
+	libastal-network-git
+	libastal-wireplumber-git
+	libastal-tray-git
+	libastal-apps-git
+	libastal-bluetooth-git
+	libastal-battery-git
+	libastal-powerprofiles-git
+)
+optdepends=(
+	'libastal-hyprland-git: Hyprland support'
+	'libastal-river-git: River support'
+	'libgtop: GTop support'
 )
 makedepends=(
 	git
@@ -30,7 +45,7 @@ conflicts=('morghulis')
 
 pkgver() {
 	cd "$pkgname" || exit
-	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+	git describe --long --tags --abbrev=7 | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 build() {
