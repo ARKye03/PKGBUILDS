@@ -1,7 +1,7 @@
 # Maintainer: ARKye03 <rafa03-dev@proton.me>
 
 pkgname=morghulis
-pkgver=v0.7.1
+pkgver=v0.9.0
 pkgrel=1
 pkgdesc="GTK4 Desktop Shell"
 arch=(x86_64)
@@ -12,26 +12,39 @@ depends=(
 	gtk4-layer-shell
 	glib2
 	libnm
-	libastal-meta
 	libadwaita
+	libastal-io-git
+	libastal-4-git
+	libastal-mpris-git
+	libastal-notifd-git
+	libastal-network-git
+	libastal-wireplumber-git
+	libastal-tray-git
+	libastal-apps-git
+	libastal-bluetooth-git
+	libastal-battery-git
+	libastal-powerprofiles-git
+	libastal-hyprland-git
+	libastal-river-git
 )
 source=("${pkgname}-${pkgver}::${url}/releases/download/${pkgver}/morghulis-${pkgver}.tar.xz")
-sha256sums=('19d4e983e0dbf861c7b2caf5ed4f8bddc376800c53db974aa1ba4f9aec5431ea')
+sha256sums=('37db28bc150b16f2ce89a69f933fde4fbf741bbf85a4d0d189876699a37e0f93')
 
 prepare() {
-	cd "${srcdir}" || exit
+	cd $srcdir || exit
 }
 
 package() {
-	install -Dm755 "${srcdir}/morghulis-${pkgver}" "${pkgdir}/usr/bin/morghulis"
-	install -Dm755 "${srcdir}/morghulctl-${pkgver}" "${pkgdir}/usr/bin/morghulctl"
+	cd $srcdir || exit
+	install -Dm755 "morghulis-${pkgver}" "${pkgdir}/usr/bin/morghulis"
+	install -Dm755 "morghulctl-${pkgver}" "${pkgdir}/usr/bin/morghulctl"
 
-	install -Dm0644 "${srcdir}/colloid-morghulis-system-hibernate-symbolic.svg" "${pkgdir}/usr/share/pixmaps/colloid-morghulis-system-hibernate-symbolic.svg"
-	install -Dm0644 "${srcdir}/colloid-morghulis-system-lock-screen-symbolic.svg" "${pkgdir}/usr/share/pixmaps/colloid-morghulis-system-lock-screen-symbolic.svg"
-	install -Dm0644 "${srcdir}/colloid-morghulis-system-reboot-symbolic.svg" "${pkgdir}/usr/share/pixmaps/colloid-morghulis-system-reboot-symbolic.svg"
-	install -Dm0644 "${srcdir}/colloid-morghulis-system-shutdown-symbolic.svg" "${pkgdir}/usr/share/pixmaps/colloid-morghulis-system-shutdown-symbolic.svg"
-	install -Dm0644 "${srcdir}/colloid-morghulis-system-suspend-symbolic.svg" "${pkgdir}/usr/share/pixmaps/colloid-morghulis-system-suspend-symbolic.svg"
+	install -Dm0644 "data/assets/colloid-morghulis-system-hibernate-symbolic.svg" "${pkgdir}/usr/share/pixmaps/colloid-morghulis-system-hibernate-symbolic.svg"
+	install -Dm0644 "data/assets/colloid-morghulis-system-lock-screen-symbolic.svg" "${pkgdir}/usr/share/pixmaps/colloid-morghulis-system-lock-screen-symbolic.svg"
+	install -Dm0644 "data/assets/colloid-morghulis-system-reboot-symbolic.svg" "${pkgdir}/usr/share/pixmaps/colloid-morghulis-system-reboot-symbolic.svg"
+	install -Dm0644 "data/assets/colloid-morghulis-system-shutdown-symbolic.svg" "${pkgdir}/usr/share/pixmaps/colloid-morghulis-system-shutdown-symbolic.svg"
+	install -Dm0644 "data/assets/colloid-morghulis-system-suspend-symbolic.svg" "${pkgdir}/usr/share/pixmaps/colloid-morghulis-system-suspend-symbolic.svg"
 
-	install -Dm0644 "${srcdir}/com.github.ARKye03.morghulis.png" "${pkgdir}/usr/share/pixmaps/com.github.ARKye03.morghulis.png"
-	install -Dm755 "${srcdir}/com.github.ARKye03.morghulis.desktop.in" "${pkgdir}/usr/share/applications/com.github.ARKye03.morghulis.desktop"
+	install -Dm0644 "data/desktop/com.github.ARKye03.morghulis.png" "${pkgdir}/usr/share/pixmaps/com.github.ARKye03.morghulis.png"
+	install -Dm755 "data/desktop/com.github.ARKye03.morghulis.desktop.in" "${pkgdir}/usr/share/applications/com.github.ARKye03.morghulis.desktop"
 }
