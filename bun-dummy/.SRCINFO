@@ -1,0 +1,8 @@
+pkgbase = bunjs-dummy
+	pkgdesc = Dummy package for bunjs
+	pkgver = 1.0.0
+	pkgrel = 1
+	arch = any
+	provides = bun=99.0.0
+
+pkgname = bunjs-dummy
