@@ -1,6 +1,6 @@
 pkgbase = morghulis
-	pkgdesc = GTK4 Desktop Shell
-	pkgver = v0.9.0
+	pkgdesc = Wayland GTK4 Desktop Shell
+	pkgver = v0.11.2
 	pkgrel = 1
 	url = https://github.com/ARKye03/morghulis
 	arch = x86_64
@@ -23,7 +23,9 @@ pkgbase = morghulis
 	depends = libastal-powerprofiles-git
 	depends = libastal-hyprland-git
 	depends = libastal-river-git
-	source = morghulis-v0.9.0::https://github.com/ARKye03/morghulis/releases/download/v0.9.0/morghulis-v0.9.0.tar.xz
-	sha256sums = 37db28bc150b16f2ce89a69f933fde4fbf741bbf85a4d0d189876699a37e0f93
+	depends = libgtop
+	depends = gsound
+	source = morghulis-v0.11.2::https://github.com/ARKye03/morghulis/releases/download/v0.11.2/morghulis-v0.11.2.tar.xz
+	sha256sums = ac76848b2af44294ab8c8baba59746f002a6bf866154b9f3c0482ff748980045
 
 pkgname = morghulis
