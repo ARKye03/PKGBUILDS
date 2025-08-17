@@ -5,7 +5,7 @@ pkgver=v0.11.2
 pkgrel=1
 pkgdesc="Wayland GTK4 Desktop Shell"
 arch=(x86_64)
-license=(WTFPL)
+license=('MIT')
 url="https://github.com/ARKye03/morghulis"
 depends=(
 	gtk4

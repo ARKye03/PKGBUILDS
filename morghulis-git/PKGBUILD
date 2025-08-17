@@ -1,11 +1,11 @@
 # Maintainer: ARKye03 <rafa03-dev@proton.me>
 
 pkgname=morghulis-git
-pkgver=v0.8.0.r45.g7b36fae
+pkgver=v0.11.2.r0.g45a0f9f
 pkgrel=1
-pkgdesc="GTK4 Desktop Shell (Development Version)"
+pkgdesc="Wayland GTK4 Desktop Shell (Development Version)"
 arch=(x86_64)
-license=(WTFPL)
+license=('MIT')
 url="https://github.com/ARKye03/morghulis"
 depends=(
 	gtk4
@@ -24,11 +24,12 @@ depends=(
 	libastal-bluetooth-git
 	libastal-battery-git
 	libastal-powerprofiles-git
+	libgtop
+	gsound
 )
 optdepends=(
 	'libastal-hyprland-git: Hyprland support'
 	'libastal-river-git: River support'
-	'libgtop: GTop support'
 )
 makedepends=(
 	git
@@ -40,6 +41,7 @@ makedepends=(
 )
 source=("${pkgname}::git+${url}")
 sha256sums=('SKIP')
+install=morghulis.install
 provides=('morghulis')
 conflicts=('morghulis')
 
@@ -50,7 +52,7 @@ pkgver() {
 
 build() {
 	cd "$pkgname" || exit
-	arch-meson build
+  	arch-meson build
 	meson compile -C build
 }
 
