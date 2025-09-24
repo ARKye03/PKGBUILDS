@@ -22,10 +22,9 @@ pkgbase = gradience-hydroxy-fork-git
 	depends = python-svglib
 	depends = python-yapsy
 	depends = python-regex
-	depends = python-material-color-utilities
 	depends = libportal-gtk4
 	depends = python-jinja
-	optdepends = adw-gtk3: The theme from libadwaita ported to GTK-3
+	optdepends = adw-gtk-theme: The theme from libadwaita ported to GTK-3
 	source = git+https://github.com/hydroxycarbamide/Gradience
 	sha512sums = SKIP
 
