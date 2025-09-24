@@ -50,7 +50,7 @@ pkgver() {
 
 build() {
 	cd "$pkgname" || exit
-  arch-meson build
+	arch-meson build
 	meson compile -C build
 }
 

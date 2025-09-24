@@ -1,0 +1,51 @@
+# Maintainer: ARKye03 <rafa03-dev@proton.me>
+
+pkgname=gradience-hydroxy-fork-git
+_pkgname=Gradience
+pkgver=0.8.0_beta4
+pkgrel=1
+pkgdesc='Change the look of Adwaita, with ease (hydroxycarbamide fork)'
+arch=('x86_64')
+url='https://github.com/hydroxycarbamide/Gradience'
+license=('GPL3')
+depends=(
+  'libadwaita'
+  'libsoup3'
+  'python-libsass'
+  'python-gobject'
+  'python-anyascii'
+  'python-lxml'
+  'python-pillow'
+  'python-pluggy'
+  'python-svglib'
+  'python-yapsy'
+  'python-regex'
+  'libportal-gtk4'
+  'python-jinja'
+)
+makedepends=('meson' 'blueprint-compiler' 'gobject-introspection' 'sassc')
+checkdepends=('appstream-glib')
+optdepends=('adw-gtk-theme: The theme from libadwaita ported to GTK-3')
+install='xdg-config.install'
+source=("git+$url")
+sha512sums=('SKIP')
+
+prepare() {
+  cd "$_pkgname"
+  git submodule update --init --recursive
+}
+
+build() {
+  cd "$_pkgname"
+  arch-meson build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs || :
+}
+
+package() {
+  cd "$_pkgname"
+  meson install -C build --destdir "$pkgdir"
+}
