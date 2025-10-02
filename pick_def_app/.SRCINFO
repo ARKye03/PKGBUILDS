@@ -1,0 +1,19 @@
+pkgbase = pick_def_app
+	pkgdesc = A modern GTK4/Libadwaita application for managing default applications for file types (MIME types) on Linux.
+	pkgver = 0.0.1
+	pkgrel = 1
+	url = https://github.com/ARKye03/pick_def_app
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	makedepends = blueprint-compiler
+	depends = gtk4
+	depends = libadwaita
+	depends = glibc
+	depends = cairo
+	depends = pango
+	depends = graphene
+	source = git+https://github.com/ARKye03/pick_def_app
+	b2sums = SKIP
+
+pkgname = pick_def_app
