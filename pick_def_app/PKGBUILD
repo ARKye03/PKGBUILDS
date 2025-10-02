@@ -1,0 +1,48 @@
+# Maintainer: rafa03-dev@proton.me
+
+pkgname=pick_def_app
+pkgver=0.0.1
+pkgrel=1
+pkgdesc='A modern GTK4/Libadwaita application for managing default applications for file types (MIME types) on Linux.'
+url='https://github.com/ARKye03/pick_def_app'
+license=('MIT')
+makedepends=(
+	'cargo'
+	'blueprint-compiler'
+)
+depends=(
+	'gtk4'
+	'libadwaita'
+	'glibc'
+	'cairo'
+	'pango'
+	'graphene'
+)
+arch=('x86_64')
+source=(git+$url)
+b2sums=(SKIP)
+
+prepare() {
+	export RUSTUP_TOOLCHAIN=stable
+    cd "$pkgname"
+	cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+}
+
+build() {
+	export RUSTUP_TOOLCHAIN=stable
+	export CARGO_TARGET_DIR=target
+    cd "$pkgname"
+	cargo build --frozen --release --all-features
+}
+
+check() {
+	export RUSTUP_TOOLCHAIN=stable
+    cd "$pkgname"
+	cargo test --frozen --all-features
+}
+
+package() {
+    cd "$pkgname"
+	install -Dm0755 -t "$pkgdir/usr/bin/" "target/release/$pkgname"
+	install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}
