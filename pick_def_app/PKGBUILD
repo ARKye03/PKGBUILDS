@@ -3,7 +3,7 @@
 pkgname=pick_def_app
 pkgver=0.0.1
 pkgrel=1
-pkgdesc='A modern GTK4/Libadwaita application for managing default applications for file types (MIME types) on Linux.'
+pkgdesc="A modern GTK4/Libadwaita application for managing default applications for file types (MIME types) on Linux."
 url='https://github.com/ARKye03/pick_def_app'
 license=('MIT')
 makedepends=(
