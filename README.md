@@ -9,4 +9,4 @@
 - [**morghulis-git**](https://github.com/ARKye03/morghulis): Wayland GTK4 Desktop Shell (Development Version)
 - [**nodejs-dummy**](): Dummy package for nodejs
 - [**npm-dummy**](): Dummy package for npm
-- [**pick_def_app**](url='https://github.com/ARKye03/pick_def_app'): pkgdesc='A modern GTK4/Libadwaita application for managing default applications for file types (MIME types) on Linux.'
+- [**pick_def_app**](https://github.com/ARKye03/pick_def_app): A modern GTK4/Libadwaita application for managing default applications for file types (MIME types) on Linux.
